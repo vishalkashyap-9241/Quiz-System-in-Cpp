@@ -3,7 +3,6 @@
 using namespace std;
 
 const int TOTAL_QUESTIONS = 10;
-
 class Question
 {
 public:
@@ -23,10 +22,9 @@ public:
         optionD = d;
         correctAnswer = ans;
     }
-
     void displayQuestion(int number)
     {
-        cout << "\n=========================================\n";
+        cout << "\n<<<<<<<<<<<<<<>>>>>>>>>>>>>>>\n";
         cout << "Question " << number << endl;
         cout << question << endl;
         cout << "A. " << optionA << endl;
@@ -35,7 +33,6 @@ public:
         cout << "D. " << optionD << endl;
         cout << "Enter Answer (A/B/C/D): ";
     }
-
     bool checkAnswer(char answer)
     {
         if(answer >= 'a' && answer <= 'z')
