@@ -52,7 +52,6 @@ public:
         score = 0;
     }
 };
-
 class Result
 {
 public:
@@ -60,9 +59,9 @@ public:
     {
         float percentage = (score * 100.0) / TOTAL_QUESTIONS;
 
-        cout << "\n====================================";
+        cout << "\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
         cout << "\n           QUIZ RESULT";
-        cout << "\n====================================";
+        cout << "\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
         cout << "\nCorrect Answers : " << score;
         cout << "\nWrong Answers   : " << TOTAL_QUESTIONS - score;
         cout << "\nPercentage      : " << percentage << "%";
@@ -85,7 +84,7 @@ public:
         else
             cout << "\nStatus          : FAIL";
 
-        cout << "\n====================================\n";
+        cout << "\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n";
     }
 };
 
@@ -99,8 +98,7 @@ public:
     {
         loadQuestions();
     }
-
-    void loadQuestions()
+     void loadQuestions()
     {
         questions[0].setQuestion(
             "Who is known as the Father of Computer?",
@@ -187,9 +185,9 @@ public:
         char answer;
         student.score = 0;
 
-        cout << "\n========================================";
+        cout << "\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
         cout << "\n        ONLINE QUIZ STARTED";
-        cout << "\n========================================";
+        cout << "\n<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<";
 
         for(int i = 0; i < TOTAL_QUESTIONS; i++)
         {
@@ -217,24 +215,21 @@ int main()
     Quiz quiz;
     Result result;
 
-    cout << "=========================================\n";
+    cout << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n";
     cout << "      ONLINE QUIZ SYSTEM \n";
-    cout << "=========================================\n";
+    cout << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<\n";
     cout << "Total Questions : " << TOTAL_QUESTIONS << endl;
     cout << "Each Correct Answer = 1 Mark\n";
     cout << "Press Enter to Start...";
+    
     cin.ignore();
     cin.get();
-
     quiz.startQuiz(student);
-
     result.display(student.score);
-
     cout << "\nThank You For Using Online Quiz System.\n";
     cout << "Press Enter to Exit...";
     cin.ignore();
     cin.get();
-
     return 0;
 }
 
